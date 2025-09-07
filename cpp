@@ -1,3 +1,7 @@
 #!/usr/bin/env lua
 
-print("Hello!")
+function main()
+    print("Hello again!!!")
+end
+
+main()
