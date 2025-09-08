@@ -1,0 +1,19 @@
+name: cpp
+version: 0.1.0
+
+authors:
+  - csm https://github.com/csm-18
+
+description: |
+  cpp is a build tool and pkg manager for c++.
+
+# dependencies:
+#   pg:
+#     github: will/crystal-pg
+#     version: "~> 0.5"
+
+# development_dependencies:
+#   webmock:
+#     github: manastech/webmock.cr
+
+license: MIT
