@@ -1,1 +1,3 @@
-cpp
+bin/
+obj/
+cpp.layout
