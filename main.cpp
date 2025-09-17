@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <filesystem>
+#include <cstdlib>
 using namespace std;
 
 
@@ -24,6 +26,17 @@ int main(int argc,char* argv[])
     }else if(args.size() == 2){
         if(args[1] == "--version" || args[1] == "-v" || args[1] == "version" || args[1] == "-version"){
             cout << "cpp " << VERSION << endl;
+        }else if(args[1] == "init"){
+            filesystem::path src = "src";
+            if(filesystem::exists(src)){
+                cout << "src/ folder already exists in current directory!\n";
+                exit(EXIT_FAILURE);
+            }else if(filesystem::create_directory(src)){
+                cout << "created src/" << "\n";
+            }else {
+                cout << "Error: Failed to create src/ directory!\n";
+                exit(EXIT_FAILURE);
+            }
         }
     }
     return 0;
